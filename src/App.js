@@ -2,6 +2,7 @@ import './App.css';
 import Nav from './Nav';
 import About from './About';
 import Weather from './Weather';
+import WeatherDetail from './WeatherDetail';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/About" component={About} />
-          <Route path="/Weather" component={Weather} />
+          <Route path="/Weather" exact component={Weather} />
+          <Route path="/Weather/:id" component={WeatherDetail}/>
         </Switch>
       </div>
     </Router>
