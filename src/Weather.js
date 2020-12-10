@@ -24,7 +24,7 @@ function Weather() {
       <h1>Weather</h1>
       
       {items.map(item => (
-        <p key={item.metadata.stations.id}>
+        <p key={item.id}>
           <Link to={'/Weather/${item.metadata}'}>{item.name}</Link>
         </p>
       ))}
